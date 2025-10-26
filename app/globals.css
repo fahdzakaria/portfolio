@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body, :root { height: 100%; }
+
+/* Couleurs globales (utilisées via classes Tailwind) */
+body { @apply bg-white text-gray-900 antialiased; }
+.dark body { @apply bg-gray-950 text-gray-100; }
+
+/* Cartes & éléments */
+.card { @apply rounded-2xl border shadow-soft transition hover:shadow-lg bg-white dark:bg-gray-950; }
+.btn { @apply inline-flex items-center gap-2 rounded-xl border px-4 py-2 text-sm transition; }
+.btn-primary { @apply bg-brand text-white border-brand hover:opacity-90 dark:bg-brand dark:text-white dark:border-brand; }
+.btn-ghost { @apply hover:bg-gray-100 dark:hover:bg-gray-900; }
+.badge { @apply rounded-full border px-3 py-1 text-xs font-medium bg-white/60 dark:bg-gray-900/60; }
+.pill { @apply rounded-full px-3 py-1 text-sm border transition; }
+.pill-active { @apply bg-brand text-white border-brand; }
+
+/* Focus visibles (a11y) */
+a:focus-visible, button:focus-visible, input:focus-visible {
+    @apply outline-none ring;
+}
